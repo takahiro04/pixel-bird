@@ -1,0 +1,59 @@
+body {
+    background-color: #000000; /* Nền đen */
+    color: #ffffff; /* Chữ trắng */
+    font-family: 'Press+Start+2P', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    border: 3px solid #ffffff; /* Viền trắng */
+    
+    /* Làm cho canvas có cạnh sắc nét, không bị mờ */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+canvas {
+    display: block;
+    background-color: #000000; /* Nền game đen */
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    z-index: 10;
+    text-shadow: 3px 3px #000;
+}
+
+#start-message, #game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.5;
+    z-index: 10;
+    text-shadow: 2px 2px #000;
+}
+
+#game-over-message span {
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
