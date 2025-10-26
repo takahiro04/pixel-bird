@@ -8,7 +8,7 @@ Trò chơi được viết bằng HTML, CSS và JavaScript thuần túy (vanilla
 
 Bạn có thể chơi trực tiếp trên trình duyệt qua GitHub Pages tại đây:
 
-
+https://takahiro04.github.io/pixel-bird/
 
 ## 🕹️ Cách Chơi
 
