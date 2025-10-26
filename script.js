@@ -113,10 +113,25 @@ function drawRect(x, y, w, h) {
     ctx.strokeRect(x, y, w, h);
 }
 
-// Hàm vẽ con chim (một khối pixel)
+
+// Hàm vẽ con chim (hình dạng pixel phức tạp hơn)
 function drawBird() {
-    drawRect(canvas.width / 2 - birdSize / 2, birdY, birdSize, birdSize);
+    const birdX = canvas.width / 2 - birdSize / 2;
+    const birdYPos = birdY; // Đổi tên biến để tránh nhầm lẫn với birdY toàn cục
+
+    // Thân chim
+    drawRect(birdX, birdYPos + birdSize * 0.2, birdSize, birdSize * 0.6);
+
+    // Đầu chim
+    drawRect(birdX + birdSize * 0.7, birdYPos, birdSize * 0.4, birdSize * 0.4);
+
+    // Mỏ chim
+    drawRect(birdX + birdSize * 1.1, birdYPos + birdSize * 0.1, birdSize * 0.2, birdSize * 0.1);
+
+    // Cánh chim (vẽ hơi lùi lại và phía dưới thân một chút)
+    drawRect(birdX - birdSize * 0.2, birdYPos + birdSize * 0.4, birdSize * 0.4, birdSize * 0.3);
 }
+
 
 // Hàm kiểm tra va chạm
 function checkCollision(pipe) {
